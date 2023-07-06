@@ -28,9 +28,9 @@ while (!elDato) {
     dato3 = Number(prompt("Ingrese la nota 3"));
 
     if (dato1 >= 0 && dato2 >= 0 && dato3 >= 0) {
-    validInput = true;
+    elDato = true;
     } else {
-    alert("Las notas deben ser valores numéricos no negativos. Inténtelo nuevamente.");
+    alert("nténtelo nuevamente.");
     }
 }
 
