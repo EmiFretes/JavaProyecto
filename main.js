@@ -4,13 +4,13 @@ function calcularNotaFinal(dato1, dato2, dato3) {
     
     let calificacion = '';
     
-    if (promedio >= 9) {
+    if (promedio = 9) {
         calificacion = 'A';
-    } else if (promedio >= 8) {
+    } else if (promedio = 8) {
         calificacion = 'B';
-    } else if (promedio >= 7) {
+    } else if (promedio = 7) {
         calificacion = 'C';
-    } else if (promedio >= 6) {
+    } else if (promedio = 6) {
         calificacion = 'D';
     } else {
         calificacion = 'F';
