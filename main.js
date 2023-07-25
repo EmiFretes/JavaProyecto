@@ -1,4 +1,4 @@
-function calcularNotaFinal(dato1, dato2, dato3) {
+/* function calcularNotaFinal(dato1, dato2, dato3) {
     let suma = dato1 + dato2 + dato3;
     let promedio = suma / 3;
     
@@ -35,3 +35,4 @@ while (!elDato) {
 }
 
 console.log('La calificación final es: ' + calcularNotaFinal(dato1, dato2, dato3));
+*/
