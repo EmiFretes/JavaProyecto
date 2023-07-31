@@ -13,7 +13,7 @@ function Mascota(nombre, especie, edad) {
 function obtenerInformacionMascota() {
     const nombre = prompt("Ingrese el nombre de la mascota:");
     const especie = prompt("Ingrese la especie de la mascota:");
-    const edad = parseInt(prompt("Ingrese la edad de la mascota (en años):"));
+    const edad = parseInt(prompt("Ingrese la edad de la mascota:"));
 
     return new Mascota(nombre, especie, edad);
 }
