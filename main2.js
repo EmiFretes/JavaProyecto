@@ -21,9 +21,14 @@ function obtenerInformacionMascota() {
 console.log("Datos de las mascotas");
 
 
-const miMascota1 = obtenerInformacionMascota();
-miMascota1.mostrarDetalles();
 
+const lasMascotas = [];
+
+const miMascota1 = obtenerInformacionMascota();
+lasMascotas.push(miMascota1);
 
 const miMascota2 = obtenerInformacionMascota();
-miMascota2.mostrarDetalles();
+lasMascotas.push(miMascota2);
+
+
+
