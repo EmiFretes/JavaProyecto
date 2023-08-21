@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contador</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-<h1>Contador</h1>
-<p id="counterDisplay">0</p>
-<button id="incrementButton">Incrementar</button>
-<button id="resetButton">Reiniciar</button>
+    <div class="nav-container">
+        <nav class="navbar">
+            <h1 class="navbar-logo">Shop</h1>
+            <h2 class="ver-carrito" id="verCarrito">🛒</h2>
+        </nav>
+    </div>
 
-<script src="main3.js"></script>
+    <div class="banner">
+        <div class="banner-container">
+            <h1>Tienda De Calzados Undead</h1>
+            <p>El mejor calzado del condado</p>
+        </div>
+    </div>
+
+    <div id="shopContent" class="shop-content"></div>
+
+    <div id="modal-container" class="modal-container"></div>
+
+    <script src="products.js"></script>   
+    <script src="main.js"></script>    
 </body>
+
 </html>

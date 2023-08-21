@@ -1,38 +1,74 @@
-/* function calcularNotaFinal(dato1, dato2, dato3) {
-    let suma = dato1 + dato2 + dato3;
-    let promedio = suma / 3;
+const shopContent = document.getElementById("shopContent");
+const verCarrito = document.getElementById("verCarrito");
+const modalContainer = document.getElementById("modal-container");
+
+let carrito = [];
+
+productos.forEach((product)=> {
+    let content = document.createElement("div");
+    content.className ="card";
+    content.innerHTML = `
+        <img src="${product.img}">
+        <h3>${product.nombre}</h3>
+        <p class="price">${product.precio} $</p>
+    `;
+    shopContent.append(content);
+    let comprar = document.createElement("button")
+        comprar.innerText = "Comprar";
+        comprar.className = "comprar"
+
+        content.append(comprar)
+
+    comprar.addEventListener("click", ()=> {
+        carrito.push({
+            id : product.id,
+            img : product.img,
+            nombre : product.nombre,
+            precio : product.precio,
+        });
+    });
+});
+
+verCarrito.addEventListener("click", () =>{
+    modalContainer.innerHTML = "";
+    modalContainer.style.display= "flex";
+
+    const modalHeader = document.createElement("div");
+    modalHeader.className = "modal-header";
+    modalHeader.innerHTML = `
+        <h1 class="modal-header-title">Carrito</h1>`;
+
+    modalContainer.append(modalHeader);
+
+    const modalbutton = document.createElement("h1");
+    modalbutton.innerText = "x";
+    modalbutton.className = "modal-header-button";
+
+    modalbutton.addEventListener("click", () =>{
+        modalContainer.style.display= "none";
+    })
+
+    modalHeader.append(modalbutton);
+
+    carrito.forEach((product)=> {
+        let carritoContent = document.createElement("div");
+
+        carritoContent.className = "modal-content";
+        carritoContent.innerHTML = `
+        <img src="${product.img}">
+        <h3>${product.nombre}</h3>
+        <p>${product.precio} $</p>
+        `;
+        modalContainer.append(carritoContent);
+    });
+
+    const total = carrito.reduce((acu, pr) => acu + pr.precio, 0);
+
+    const totalBuying = document.createElement ("div");
+    totalBuying.className = "total-content";
+    totalBuying.innerHTML = ` Total a pagar: ${total}$ `;
+    modalContainer.append(totalBuying);
     
-    let calificacion = '';
-    
-    if (promedio = 9) {
-        calificacion = 'A';
-    } else if (promedio = 8) {
-        calificacion = 'B';
-    } else if (promedio = 7) {
-        calificacion = 'C';
-    } else if (promedio = 6) {
-        calificacion = 'D';
-    } else {
-        calificacion = 'F';
-    }
-    
-    return calificacion;
-}
 
-    let dato1, dato2, dato3;
-    let elDato = false;
 
-while (!elDato) {
-    dato1 = Number(prompt("Ingrese la nota 1"));
-    dato2 = Number(prompt("Ingrese la nota 2"));
-    dato3 = Number(prompt("Ingrese la nota 3"));
-
-    if (dato1 >= 0 && dato2 >= 0 && dato3 >= 0) {
-    elDato = true;
-    } else {
-    alert("nténtelo nuevamente.");
-    }
-}
-
-console.log('La calificación final es: ' + calcularNotaFinal(dato1, dato2, dato3));
-*/
+});
