@@ -1,5 +1,27 @@
 body {
     margin:  0px;
+    
+}
+main{
+    margin-bottom: 15%;
+    margin-top: 5%;
+}
+
+footer {
+    background-color: #222;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+.links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.links li {
+    display: inline-block;
+    margin-right: 10px;
 }
 
 /*navbar*/
@@ -67,6 +89,9 @@ body {
     margin-top: 30px;
     margin-left: 80px;
     margin-right: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px; 
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -153,4 +178,28 @@ body {
     padding: 20px;
     text-align: center;
     padding-top: 20px;
+}
+
+.delete-product {
+    cursor: pointer;
+}
+
+/* Carritocounter */
+.cantidad-carrito {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 37px;
+    right: 14px;
+    position: absolute;
+    display: none;
+
+}
+.sumar {
+    cursor: pointer;
+}
+.restar {
+    cursor: pointer;
 }
